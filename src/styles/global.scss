@@ -1,0 +1,29 @@
+//Nav Bar
+.theme--light.v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border {
+    background-color: transparent !important;
+}
+.v-toolbar.v-toolbar--collapsed {
+    max-width: 152px !important;
+}
+.v-toolbar {
+  transition: 0s cubic-bezier(0.4, 0, 0.2, 1) 
+  transform, 0s cubic-bezier(0.4, 0, 0.2, 1) 
+  box-shadow, 0s cubic-bezier(0.4, 0, 0.2, 1) max-width, 0s cubic-bezier(0.4, 0, 0.2, 1) width !important;
+}
+//Color class 
+.bt {
+    color: #1976D2 !important;
+}
+// FAQ
+.theme--light.v-expansion-panels .v-expansion-panel:not(:first-child)::after {
+    border-color: transparent !important;
+}
+.v-treeview-node__label {
+    flex: 1;
+    font-size: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal!important;
+}
+// Page Title text-h5 text-sm-h3 text-xl-h2
+//Section header text-h6 text-sm-h4 text-xl-h3
