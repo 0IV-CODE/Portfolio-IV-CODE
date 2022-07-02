@@ -430,7 +430,7 @@
                   if you are feeling adventurous try adding some
                   <b class="text-decoration-underline white--text"
                     ><a
-                      class="blue--text"
+                      class="white--text"
                       href="https://www.nutella.com/us/en/"
                       target="_blank"
                       >nutella</a

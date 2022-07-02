@@ -218,7 +218,8 @@
                               outlined
                               color="blue"
                               class="rounded-pill"
-                              ><v-icon class="px-1">mdi-pencil-ruler</v-icon
+                              ><v-icon class="px-1"
+                                >mdi-frequently-asked-questions</v-icon
                               >FAQ
                             </v-btn>
                           </v-col>
@@ -564,7 +565,8 @@
                           outlined
                           color="blue"
                           class="rounded-pill"
-                          ><v-icon class="px-1">mdi-pencil-ruler</v-icon
+                          ><v-icon class="px-1"
+                            >mdi-frequently-asked-questions</v-icon
                           >FAQ
                         </v-btn>
                       </v-col>

@@ -633,9 +633,8 @@ export default new Vuex.Store({
         company: "Seel Tech Buildings Systems",
         website: "https://steeltech.io/",
         style: "color: #ff6600",
-        comment:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing erat vitae neque id at placerat ut sed. Tortor dui facilisis ultrices turpis elementum aliquam. Cras egestas ac malesuada vestibulum, pretium tortor.",
-        stars: 4,
+        comment: "Currently waiting on review from business",
+        stars: 0,
         src: "https://ik.imagekit.io/invimgs0101/IV-CODE/logos/STBS-logo/Screenshot_2022-05-03_203403_FGmACR8VC.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026891883",
       },
       {
@@ -643,19 +642,18 @@ export default new Vuex.Store({
         company: "Components U.S.A",
         website: "https://cusa.io/",
         style: "color: #ff6600",
-        comment:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing erat vitae neque id at placerat ut sed. Tortor dui facilisis ultrices turpis elementum aliquam. Cras egestas ac malesuada vestibulum, pretium tortor.",
-        stars: 3,
+        comment: "Currently waiting on review from business",
+        stars: 0,
         src: "https://ik.imagekit.io/invimgs0101/IV-CODE/logos/CUSA-logo/Components-logo-lrg.984febe8_uMkUUgUSu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026953379",
       },
       {
         id: 3,
         company: "IV-CODE",
-        website: "www.iv-code.io",
+        website: "https://www.iv-code.io/",
         style: "color: #2196F3",
         comment:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing erat vitae neque id at placerat ut sed. Tortor dui facilisis ultrices turpis elementum aliquam. Cras egestas ac malesuada vestibulum, pretium tortor.",
-        stars: 4,
+          "Considering that I created this website after before figuring out how to integrate a design process prior to build I'd rate it a 3.5.",
+        stars: 3.5,
         src: "https://ik.imagekit.io/invimgs0101/IV-CODE/logos/ivcode-logo/Wolf_BLACK_U9jK_vyvA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848451",
       },
     ],
