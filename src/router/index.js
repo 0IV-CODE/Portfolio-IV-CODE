@@ -6,13 +6,11 @@ import Services from "../views/Services.vue";
 import Projects from "../views/Projects.vue";
 import Contact from "../views/Contact.vue";
 // Looped Pages
-import Re from "../components/Re.vue";
 import Project from "../components/Project.vue";
 import Service from "../components/Service.vue";
 // Nested Pages
 import IndexPg from "../views/Page/IndexPg.vue";
 import About from "../views/Page/About.vue";
-import Resources from "../views/Page/Resources.vue";
 import Faq from "../views/Page/Faq.vue";
 import PrivacyPolicy from "../views/Page/PrivacyPolicy.vue";
 import Credits from "../views/Page/Credits.vue";
@@ -46,11 +44,6 @@ const routes = [
   },
   // Looped Pages
   {
-    path: "/Re/:id",
-    name: "Re",
-    component: Re,
-  },
-  {
     path: "/Project/:id",
     name: "Project",
     component: Project,
@@ -70,11 +63,6 @@ const routes = [
         path: "/About",
         name: "About",
         component: About,
-      },
-      {
-        path: "/Resources",
-        name: "Resources",
-        component: Resources,
       },
       {
         path: "/Faq",

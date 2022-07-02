@@ -142,11 +142,6 @@ export default {
           page: "/About",
         },
         {
-          title: "Resources",
-          icon: "mdi-bookshelf",
-          page: "/Resources",
-        },
-        {
           title: "FAQ",
           icon: "mdi-frequently-asked-questions",
           page: "/Faq",

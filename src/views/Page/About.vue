@@ -214,12 +214,12 @@
                           <v-col cols="12" align="center" class="pa-0">
                             <v-btn
                               link
-                              to="/Resources"
+                              to="/Faq"
                               outlined
                               color="blue"
                               class="rounded-pill"
                               ><v-icon class="px-1">mdi-pencil-ruler</v-icon
-                              >Resources
+                              >FAQ
                             </v-btn>
                           </v-col>
                         </v-row>
@@ -560,12 +560,12 @@
                       <v-col cols="12" align="center" class="pa-0">
                         <v-btn
                           link
-                          to="/Resources"
+                          to="/Faq"
                           outlined
                           color="blue"
                           class="rounded-pill"
                           ><v-icon class="px-1">mdi-pencil-ruler</v-icon
-                          >Resources
+                          >FAQ
                         </v-btn>
                       </v-col>
                     </v-row>
