@@ -50,15 +50,15 @@
                 @click="activateRevInner()"
               >
                 <v-list-item-icon>
-                  <v-icon color="blue" size="35"
-                    >mdi-information-outline</v-icon
-                  >
+                  <v-icon color="blue" size="35">{{
+                    informationOutline
+                  }}</v-icon>
                 </v-list-item-icon>
                 <v-list-item-title class="blue--text text-h6"
                   >More</v-list-item-title
                 >
                 <v-list-item-icon>
-                  <v-icon color="blue">mdi-chevron-right</v-icon>
+                  <v-icon color="blue">{{ chevronRight }}</v-icon>
                 </v-list-item-icon>
               </v-list-item>
             </v-list>
@@ -71,7 +71,7 @@
                 @click="activateRevInner()"
               >
                 <v-list-item-icon>
-                  <v-icon color="blue" size="35">mdi-chevron-left</v-icon>
+                  <v-icon color="blue" size="35">{{ chevronLeft }}</v-icon>
                 </v-list-item-icon>
                 <v-list-item-title class="blue--text text-h6"
                   >Go Back</v-list-item-title
@@ -128,7 +128,7 @@
         >
         <v-app-bar-nav-icon>
           <v-btn @click="show()" icon
-            ><v-icon color="white" size="55">mdi-menu</v-icon></v-btn
+            ><v-icon color="white" size="55">{{ menu }}</v-icon></v-btn
           ></v-app-bar-nav-icon
         >&nbsp;&nbsp;&nbsp;
       </v-app-bar>
@@ -152,6 +152,19 @@ a {
 
 <script>
 import { mapState, mapActions } from "vuex";
+// Imported Icons
+import { mdiHomeOutline } from "@mdi/js";
+import { mdiImageMultipleOutline } from "@mdi/js";
+import { mdiBriefcase } from "@mdi/js";
+import { mdiEmailFastOutline } from "@mdi/js";
+import { mdiAccountTie } from "@mdi/js";
+import { mdiFrequentlyAskedQuestions } from "@mdi/js";
+import { mdiLock } from "@mdi/js";
+import { mdiScriptText } from "@mdi/js";
+import { mdiChevronLeft } from "@mdi/js";
+import { mdiChevronRight } from "@mdi/js";
+import { mdiMenu } from "@mdi/js";
+import { mdiInformationOutline } from "@mdi/js";
 
 export default {
   name: "NavDrawer",
@@ -160,43 +173,47 @@ export default {
     return {
       collapseOnScroll: true,
       mainNav: true,
+      informationOutline: mdiInformationOutline,
+      chevronLeft: mdiChevronLeft,
+      chevronRight: mdiChevronRight,
+      menu: mdiMenu,
       mainMenu: [
-        { title: "Home", icon: "mdi-home-outline", page: "/" },
+        { title: "Home", icon: mdiHomeOutline, page: "/" },
         {
           title: "Projects",
-          icon: "mdi-image-multiple-outline",
+          icon: mdiImageMultipleOutline,
           page: "/Projects",
         },
         {
           title: "Services",
-          icon: "mdi-briefcase",
+          icon: mdiBriefcase,
           page: "/Services",
         },
         {
           title: "Contact Me",
-          icon: "mdi-email-fast-outline",
+          icon: mdiEmailFastOutline,
           page: "/Contact",
         },
       ],
       nestedMenu: [
         {
           title: "About Me",
-          icon: "mdi-account-tie",
+          icon: mdiAccountTie,
           page: "/About",
         },
         {
           title: "FAQ",
-          icon: "mdi-frequently-asked-questions",
+          icon: mdiFrequentlyAskedQuestions,
           page: "/Faq",
         },
         {
           title: "Privacy",
-          icon: "mdi-lock",
+          icon: mdiLock,
           page: "/PrivacyPolicy",
         },
         {
           title: "Credits",
-          icon: "mdi-script-text",
+          icon: mdiScriptText,
           page: "/Credits",
         },
       ],

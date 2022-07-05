@@ -42,7 +42,7 @@
         cols="auto"
         class="py-2 px-2"
       >
-        <v-card width="250" height="300" :class="card.style" elevation="4">
+        <v-card width="250" height="325" :class="card.style" elevation="4">
           <v-icon size="100" :color="card.iconStyle" class="">{{
             card.icon
           }}</v-icon>

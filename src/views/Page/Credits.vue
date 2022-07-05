@@ -15,7 +15,7 @@
             alt="Web illustrations by Storyset"
           ></v-img>
           <p class="blue--text">
-            <v-icon color="blue">mdi-information</v-icon>
+            <v-icon color="blue">{{ information }}</v-icon>
             <b>
               This Page is under development, please use the menu or click home
             </b>
@@ -61,7 +61,15 @@
 </template>
 
 <script>
+//Imported Icons
+import { mdiInformation } from "@mdi/js";
+
 export default {
   name: "Credits",
+  data() {
+    return {
+      information: mdiInformation,
+    };
+  },
 };
 </script>

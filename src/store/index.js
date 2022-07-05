@@ -1,5 +1,18 @@
 import Vue from "vue";
 import Vuex from "vuex";
+//Icons
+import { mdiMonitorDashboard } from "@mdi/js";
+import { mdiMonitorEdit } from "@mdi/js";
+import { mdiMonitorEye } from "@mdi/js";
+import { mdiXml } from "@mdi/js";
+import { mdiCamera } from "@mdi/js";
+import { mdiMapMarkerPath } from "@mdi/js";
+import { mdiClipboardTextSearchOutline } from "@mdi/js";
+import { mdiBriefcaseEditOutline } from "@mdi/js";
+import { mdiGestureTap } from "@mdi/js";
+import { mdiCellphoneLink } from "@mdi/js";
+import { mdiBriefcaseSearchOutline } from "@mdi/js";
+import { mdiChartTimelineVariant } from "@mdi/js";
 
 Vue.use(Vuex);
 
@@ -22,7 +35,7 @@ export default new Vuex.Store({
         altSrc: "Images From Unsplash",
         iconstyle: "white",
         pstyle: "white--text ma-2",
-        icon: "mdi-monitor-edit",
+        icon: mdiMonitorEdit,
         skills: [
           { id: 1, skill: "User Research/Journey" },
           { id: 1, skill: "Usability Testing" },
@@ -38,7 +51,7 @@ export default new Vuex.Store({
         altSrc: "Images From Unsplash",
         iconstyle: "white",
         pstyle: "white--text ma-2",
-        icon: "mdi-monitor-dashboard",
+        icon: mdiMonitorDashboard,
         skills: [
           { id: 1, skill: "HTML, CSS, & JS" },
           { id: 1, skill: "Vue.js" },
@@ -54,7 +67,7 @@ export default new Vuex.Store({
         altSrc: "Images From Unsplash",
         iconstyle: "white",
         pstyle: "white--text ma-2",
-        icon: "mdi-monitor-eye",
+        icon: mdiMonitorEye,
         skills: [
           { id: 1, skill: "AD Managment" },
           { id: 1, skill: ".EXE/Config of Hardware/Apps" },
@@ -88,7 +101,7 @@ export default new Vuex.Store({
         altSrc: "Images From Unsplash",
         iconstyle: "white",
         pstyle: "white--text ma-2",
-        icon: "mdi-monitor-edit",
+        icon: mdiXml,
         skills: [
           { id: 1, skill: "Collaboration" },
           { id: 1, skill: "Communication" },
@@ -103,7 +116,7 @@ export default new Vuex.Store({
         altSrc: "Images From Unsplash",
         iconstyle: "white",
         pstyle: "white--text ma-2",
-        icon: "mdi-monitor-dashboard",
+        icon: mdiMonitorDashboard,
         skills: [
           { id: 1, skill: "Responive Design" },
           { id: 1, skill: "Version Control" },
@@ -118,7 +131,7 @@ export default new Vuex.Store({
         altSrc: "Images From Unsplash",
         iconstyle: "white",
         pstyle: "white--text ma-2",
-        icon: "mdi-monitor-eye",
+        icon: mdiMonitorEye,
         skills: [
           { id: 1, skill: "Teamwork" },
           { id: 1, skill: "Troubleshooting" },
@@ -134,7 +147,7 @@ export default new Vuex.Store({
         iconstyle: "grey",
         pstyle: "grey--text ma-2",
         soon: "Coming Soon",
-        icon: "mdi-xml",
+        icon: mdiXml,
         skills: [
           { id: 1, skill: "Caffeine  Friendly" },
           { id: 1, skill: "" },
@@ -802,9 +815,9 @@ export default new Vuex.Store({
         ],
         //Project Category Icon (Icon Representing Project in id: 2)
         icons: [
-          { id: 1, name: "mdi-monitor-edit", color: "grey", size: "40" },
-          { id: 2, name: "mdi-monitor-dashboard", color: "blue", size: "120" },
-          { id: 3, name: "mdi-xml", color: "grey", size: "40" },
+          { id: 1, name: mdiMonitorEdit, color: "grey", size: "40" },
+          { id: 2, name: mdiMonitorDashboard, color: "blue", size: "120" },
+          { id: 3, name: mdiXml, color: "grey", size: "40" },
         ],
 
         // Copy Section
@@ -952,9 +965,9 @@ export default new Vuex.Store({
         ],
         //Project Category Icon (Icon Representing Project in id: 2)
         icons: [
-          { id: 1, name: "mdi-monitor-edit", color: "grey", size: "40" },
-          { id: 2, name: "mdi-monitor-dashboard", color: "blue", size: "120" },
-          { id: 3, name: "mdi-xml", color: "grey", size: "40" },
+          { id: 1, name: mdiMonitorEdit, color: "grey", size: "40" },
+          { id: 2, name: mdiMonitorDashboard, color: "blue", size: "120" },
+          { id: 3, name: mdiXml, color: "grey", size: "40" },
         ],
         // Copy Section
         par1: "A while after creating Steel Tech's Website I wanted to create a single page portfolio as a way to document work. In this period I was barely starting to get the handle on concept designs pre-production. Just a note, I did three entire revsions since I kept learning new ways to create websites.",
@@ -1094,9 +1107,9 @@ export default new Vuex.Store({
         ],
         //Project Category Icon (Icon Representing Project in id: 2)
         icons: [
-          { id: 1, name: "mdi-monitor-edit", color: "grey", size: "40" },
-          { id: 2, name: "mdi-monitor-dashboard", color: "blue", size: "120" },
-          { id: 3, name: "mdi-xml", color: "grey", size: "40" },
+          { id: 1, name: mdiMonitorEdit, color: "grey", size: "40" },
+          { id: 2, name: mdiMonitorDashboard, color: "blue", size: "120" },
+          { id: 3, name: mdiXml, color: "grey", size: "40" },
         ],
         // Copy Section
         par1: 'This Project I named "6A-Teams Company" was a hypothetical tactical company that gives protection services. After many tutorials in css I remember wanting to build something tactical since at the time I was watching videos of airsoft.',
@@ -1112,7 +1125,7 @@ export default new Vuex.Store({
       {
         id: 0,
         name: "UI/UX",
-        icon: "mdi-monitor-edit",
+        icon: mdiMonitorEdit,
         iconStyle: "white",
         service: "UI/UX",
         status: "VIEW",
@@ -1129,7 +1142,7 @@ export default new Vuex.Store({
         cards: [
           {
             id: 1,
-            icon: "mdi-map-marker-path",
+            icon: mdiMapMarkerPath,
             iconStyle: "white",
             title: "Recognized Process",
             caption: "Organized",
@@ -1154,7 +1167,7 @@ export default new Vuex.Store({
           },
           {
             id: 2,
-            icon: "mdi-clipboard-text-search-outline",
+            icon: mdiClipboardTextSearchOutline,
             iconStyle: "black",
             title: "Analytical Research",
             caption: "Informative",
@@ -1174,7 +1187,7 @@ export default new Vuex.Store({
           },
           {
             id: 3,
-            icon: "mdi-briefcase-edit-outline",
+            icon: mdiBriefcaseEditOutline,
             iconStyle: "white",
             title: "Tailored Concepts ",
             caption: "Unique",
@@ -1199,7 +1212,7 @@ export default new Vuex.Store({
           },
           {
             id: 4,
-            icon: "mdi-gesture-tap",
+            icon: mdiGestureTap,
             iconStyle: "black",
             title: "Interactive Final",
             caption: "Visualized",
@@ -1223,7 +1236,7 @@ export default new Vuex.Store({
       {
         id: 1,
         name: "Front-End Developer",
-        icon: "mdi-monitor-dashboard",
+        icon: mdiMonitorDashboard,
         iconStyle: "white",
         service: "Front-End-DEV",
         status: "VIEW",
@@ -1240,7 +1253,7 @@ export default new Vuex.Store({
         cards: [
           {
             id: 1,
-            icon: "mdi-cellphone-link",
+            icon: mdiCellphoneLink,
             iconStyle: "white",
             title: "Responsive Designs",
             caption: "Compatibility",
@@ -1270,7 +1283,7 @@ export default new Vuex.Store({
           },
           {
             id: 2,
-            icon: "mdi-briefcase-search-outline",
+            icon: mdiBriefcaseSearchOutline,
             iconStyle: "black",
             title: "SEO",
             caption: "Optimized",
@@ -1290,7 +1303,7 @@ export default new Vuex.Store({
           },
           {
             id: 3,
-            icon: "mdi-chart-timeline-variant",
+            icon: mdiChartTimelineVariant,
             iconStyle: "white",
             title: "Latest Features",
             caption: "Modern",
@@ -1310,7 +1323,7 @@ export default new Vuex.Store({
           },
           {
             id: 4,
-            icon: "mdi-briefcase-edit-outline",
+            icon: mdiBriefcaseEditOutline,
             iconStyle: "black",
             title: "Custom",
             caption: "Tailored",
@@ -1334,7 +1347,7 @@ export default new Vuex.Store({
       {
         id: 2,
         name: "Back-End Developer",
-        icon: "mdi-xml",
+        icon: mdiXml,
         service: "Back-End-Dev",
         status: "N/A",
       },
@@ -1342,7 +1355,7 @@ export default new Vuex.Store({
       {
         id: 3,
         name: "Photographer",
-        icon: "mdi-camera",
+        icon: mdiCamera,
         service: "Photographer",
         status: "N/A",
       },

@@ -9,7 +9,7 @@
           <v-row>
             <v-col cols="12" class="pa-0" align="center">
               <v-btn icon large @click="drawer = false" class="hovcolor">
-                <v-icon color="blue" size="35">mdi-close</v-icon>
+                <v-icon color="blue" size="35">{{ close }}</v-icon>
               </v-btn>
             </v-col>
             <v-col cols="12" v-if="hidesideMenu">
@@ -41,15 +41,15 @@
                     @click="activateRevInSidebar()"
                   >
                     <v-list-item-icon>
-                      <v-icon color="blue" size="35"
-                        >mdi-information-outline</v-icon
-                      >
+                      <v-icon color="blue" size="35">{{
+                        informationOutline
+                      }}</v-icon>
                     </v-list-item-icon>
                     <v-list-item-title class="blue--text text-h6"
                       >More</v-list-item-title
                     >
                     <v-list-item-icon>
-                      <v-icon color="blue">mdi-chevron-right</v-icon>
+                      <v-icon color="blue">{{ chevronRight }}</v-icon>
                     </v-list-item-icon>
                   </v-list-item>
                 </v-list-item-group>
@@ -63,7 +63,7 @@
                   @click="activateRevInSidebar()"
                 >
                   <v-list-item-icon>
-                    <v-icon color="blue" size="35">mdi-chevron-left</v-icon>
+                    <v-icon color="blue" size="35">{{ chevronLeft }}</v-icon>
                   </v-list-item-icon>
                   <v-list-item-title class="blue--text text-h6"
                     >Go Back</v-list-item-title
@@ -107,6 +107,18 @@
 
 <script>
 import { mapState, mapActions } from "vuex";
+// Imported Icons
+import { mdiImageMultipleOutline } from "@mdi/js";
+import { mdiBriefcase } from "@mdi/js";
+import { mdiEmailFastOutline } from "@mdi/js";
+import { mdiAccountTie } from "@mdi/js";
+import { mdiFrequentlyAskedQuestions } from "@mdi/js";
+import { mdiLock } from "@mdi/js";
+import { mdiScriptText } from "@mdi/js";
+import { mdiChevronLeft } from "@mdi/js";
+import { mdiChevronRight } from "@mdi/js";
+import { mdiClose } from "@mdi/js";
+import { mdiInformationOutline } from "@mdi/js";
 
 export default {
   name: "Sidebar",
@@ -117,43 +129,47 @@ export default {
   data() {
     return {
       zIndex: 10,
+      chevronLeft: mdiChevronLeft,
+      chevronRight: mdiChevronRight,
+      close: mdiClose,
+      informationOutline: mdiInformationOutline,
       mainMenu: [
         { title: "Home", icon: "mdi-home-outline", page: "/" },
         {
           title: "Projects",
-          icon: "mdi-image-multiple-outline",
+          icon: mdiImageMultipleOutline,
           page: "/Projects",
         },
         {
           title: "Services",
-          icon: "mdi-briefcase",
+          icon: mdiBriefcase,
           page: "/Services",
         },
         {
           title: "Contact Me",
-          icon: "mdi-email-fast-outline",
+          icon: mdiEmailFastOutline,
           page: "/Contact",
         },
       ],
       nestedMenu: [
         {
           title: "About Me",
-          icon: "mdi-account-tie",
+          icon: mdiAccountTie,
           page: "/About",
         },
         {
           title: "FAQ",
-          icon: "mdi-frequently-asked-questions",
+          icon: mdiFrequentlyAskedQuestions,
           page: "/Faq",
         },
         {
           title: "Privacy",
-          icon: "mdi-lock",
+          icon: mdiLock,
           page: "/PrivacyPolicy",
         },
         {
           title: "Credits",
-          icon: "mdi-script-text",
+          icon: mdiScriptText,
           page: "/Credits",
         },
       ],

@@ -80,9 +80,9 @@
             <v-row>
               <v-col cols="12" class="px-5 py-5">
                 <v-avatar size="40" color="black">
-                  <v-icon color="white" size="25"
-                    >mdi-message-image-outline</v-icon
-                  >
+                  <v-icon color="white" size="25">{{
+                    messageImageOutline
+                  }}</v-icon>
                 </v-avatar>
               </v-col>
             </v-row>
@@ -110,6 +110,8 @@
 </style>
 <script>
 import { mapState } from "vuex";
+// Imported Icons
+import { mdiMessageImageOutline } from "@mdi/js";
 
 export default {
   name: "ProjectCard",
@@ -117,6 +119,7 @@ export default {
   data() {
     return {
       overlay: false,
+      messageImageOutline: mdiMessageImageOutline,
     };
   },
 

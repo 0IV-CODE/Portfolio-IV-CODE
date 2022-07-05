@@ -144,7 +144,7 @@
                               outlined
                               @click="dialog.value = false"
                               class="blue--text"
-                              ><v-icon color="blue">mdi-close</v-icon></v-btn
+                              ><v-icon color="blue">{{ close }}</v-icon></v-btn
                             >
                           </v-col>
                         </v-row>
@@ -218,8 +218,9 @@
                               outlined
                               color="blue"
                               class="rounded-pill"
-                              ><v-icon class="px-1"
-                                >mdi-frequently-asked-questions</v-icon
+                              ><v-icon class="px-1">{{
+                                frequentlyAskedQuestions
+                              }}</v-icon
                               >FAQ
                             </v-btn>
                           </v-col>
@@ -305,7 +306,7 @@
       <!-- Statement -->
       <v-col cols="12" align="center">
         <p class="black--text">
-          <v-icon color="blue">mdi-information</v-icon>
+          <v-icon color="blue">{{ information }}</v-icon>
           Below is a possible answer to a random question...
         </p>
       </v-col>
@@ -344,7 +345,7 @@
               item-value="name"
               label="You might find an answer..."
               placeholder="Start typing to Search"
-              prepend-icon="mdi-database-search"
+              :prepend-icon="databaseSearch"
               return-object
             ></v-autocomplete>
           </v-card-text>
@@ -499,7 +500,7 @@
                           outlined
                           @click="dialog.value = false"
                           class="blue--text"
-                          ><v-icon color="blue">mdi-close</v-icon></v-btn
+                          ><v-icon color="blue">{{ close }}</v-icon></v-btn
                         >
                       </v-col>
                     </v-row>
@@ -565,8 +566,9 @@
                           outlined
                           color="blue"
                           class="rounded-pill"
-                          ><v-icon class="px-1"
-                            >mdi-frequently-asked-questions</v-icon
+                          ><v-icon class="px-1">{{
+                            frequentlyAskedQuestions
+                          }}</v-icon
                           >FAQ
                         </v-btn>
                       </v-col>
@@ -686,6 +688,11 @@
 
 <script>
 import { mapState } from "vuex";
+//Icons Import
+import { mdiClose } from "@mdi/js";
+import { mdiFrequentlyAskedQuestions } from "@mdi/js";
+import { mdiInformation } from "@mdi/js";
+import { mdiDatabaseSearch } from "@mdi/js";
 
 export default {
   name: "About",
@@ -696,6 +703,11 @@ export default {
     isLoading: false,
     model: null,
     search: null,
+    //Icons
+    close: mdiClose,
+    frequentlyAskedQuestions: mdiFrequentlyAskedQuestions,
+    information: mdiInformation,
+    databaseSearch: mdiDatabaseSearch,
   }),
   computed: {
     ...mapState({

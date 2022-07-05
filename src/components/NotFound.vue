@@ -17,7 +17,7 @@
             alt="Web illustrations by Storyset"
           ></v-img>
           <p class="blue--text">
-            <v-icon color="blue">mdi-information</v-icon>
+            <v-icon color="blue">{{ information }}</v-icon>
             <b> This Page doesn't exist, please use the menu or click home </b>
           </p>
           <v-row>
@@ -61,7 +61,15 @@
 </template>
 
 <script>
+//Imported Icons
+import { mdiInformation } from "@mdi/js";
+
 export default {
   name: "NotFound",
+  data() {
+    return {
+      information: mdiInformation,
+    };
+  },
 };
 </script>

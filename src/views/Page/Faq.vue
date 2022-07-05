@@ -42,7 +42,7 @@
               item-value="name"
               label="Type in your question"
               placeholder="Start typing to Search"
-              prepend-icon="mdi-database-search"
+              :prepend-icon="databaseSearch"
               return-object
             ></v-autocomplete>
           </v-card-text>
@@ -158,6 +158,8 @@
 
 <script>
 import { mapState } from "vuex";
+//Icons Import
+import { mdiDatabaseSearch } from "@mdi/js";
 
 export default {
   name: "Faq",
@@ -167,6 +169,8 @@ export default {
     isLoading: false,
     model: null,
     search: null,
+    //Icons
+    databaseSearch: mdiDatabaseSearch,
   }),
   computed: {
     ...mapState({

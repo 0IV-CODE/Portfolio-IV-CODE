@@ -13,7 +13,7 @@
               :continuous="true"
               :cycle="cycle"
               :show-arrows="false"
-              delimiter-icon="mdi-minus"
+              :delimiter-icon="minus"
               height="400"
               interval="4000"
             >
@@ -66,7 +66,7 @@
               :cycle="cycle"
               show-arrows
               hide-delimiters
-              delimiter-icon="mdi-minus"
+              :delimiter-icon="minus"
               height="300"
               interval="1500"
             >
@@ -133,13 +133,16 @@
               {{ project.par1 }}
             </p>
             <p class="ml-10">
-              <v-icon>mdi-circle-small</v-icon>{{ project.par2 }}
+              <v-icon>{{ circleSmall }}</v-icon
+              >{{ project.par2 }}
             </p>
             <p class="ml-10">
-              <v-icon>mdi-circle-small</v-icon>{{ project.par3 }}
+              <v-icon>{{ circleSmall }}</v-icon
+              >{{ project.par3 }}
             </p>
             <p class="ml-10">
-              <v-icon>mdi-circle-small</v-icon>{{ project.par4 }}
+              <v-icon>{{ circleSmall }}</v-icon
+              >{{ project.par4 }}
             </p>
           </v-card>
         </v-col>
@@ -166,17 +169,17 @@
 
                   <v-tab>
                     Phone
-                    <v-icon>mdi-cellphone</v-icon>
+                    <v-icon>{{ cellphone }}</v-icon>
                   </v-tab>
 
                   <v-tab>
                     Tablet
-                    <v-icon>mdi-tablet</v-icon>
+                    <v-icon>{{ tablet }}</v-icon>
                   </v-tab>
 
                   <v-tab>
                     Laptop
-                    <v-icon>mdi-laptop</v-icon>
+                    <v-icon>{{ laptop }}</v-icon>
                   </v-tab>
                 </v-tabs>
 
@@ -249,17 +252,17 @@
 
                   <v-tab>
                     Phone
-                    <v-icon>mdi-cellphone</v-icon>
+                    <v-icon>{{ cellphone }}</v-icon>
                   </v-tab>
 
                   <v-tab>
                     Tablet
-                    <v-icon>mdi-tablet</v-icon>
+                    <v-icon>{{ tablet }}</v-icon>
                   </v-tab>
 
                   <v-tab>
                     Laptop
-                    <v-icon>mdi-laptop</v-icon>
+                    <v-icon>{{ laptop }}</v-icon>
                   </v-tab>
                 </v-tabs>
 
@@ -295,14 +298,14 @@
                 @click="usedExpand = true"
                 v-if="!usedExpand"
               >
-                Used Resources<v-icon>mdi-chevron-down</v-icon>
+                Used Resources<v-icon>{{ chevronDown }}</v-icon>
               </v-btn>
               <v-btn
                 class="blue rounded-pill white--text"
                 @click="usedExpand = false"
                 v-if="usedExpand"
               >
-                Used Resources<v-icon>mdi-chevron-up</v-icon>
+                Used Resources<v-icon>{{ chevronUp }}</v-icon>
               </v-btn>
 
               <v-card
@@ -331,14 +334,14 @@
                 @click="usedExpandTwo = true"
                 v-if="!usedExpandTwo"
               >
-                Used Tools<v-icon>mdi-chevron-down</v-icon>
+                Used Tools<v-icon>{{ chevronDown }}</v-icon>
               </v-btn>
               <v-btn
                 class="black rounded-pill white--text px-8"
                 @click="usedExpandTwo = false"
                 v-if="usedExpandTwo"
               >
-                Used Tools<v-icon>mdi-chevron-up</v-icon>
+                Used Tools<v-icon>{{ chevronUp }}</v-icon>
               </v-btn>
 
               <v-card
@@ -365,7 +368,7 @@
           <v-row>
             <!-- Project Category Icon -->
             <v-col cols="12">
-              <v-avatar size="200" class="mt-0 mt-sm-2 mt-xl-0">
+              <v-avatar tile size="200" class="mt-0 mt-sm-2 mt-xl-0">
                 <v-icon
                   v-for="(icon, i) in project.icons"
                   :key="i"
@@ -408,7 +411,7 @@
                         outlined
                         class="black"
                       >
-                        <v-icon color="white" size="30">mdi-close</v-icon>
+                        <v-icon color="white" size="30">{{ close }}</v-icon>
                       </v-btn>
                     </v-col>
                   </v-row>
@@ -418,20 +421,20 @@
                     :cycle="cycle"
                     show-arrows
                     hide-delimiter-background
-                    delimiter-icon="mdi-minus"
+                    :delimiter-icon="minus"
                     :height="cardHeight"
                     interval="4000"
                   >
                     <template v-slot:prev="{ on, attrs }">
                       <v-btn color="black" v-bind="attrs" v-on="on"
-                        ><v-icon>mdi-arrow-left-thin</v-icon>
+                        ><v-icon>{{ arrowLeftThin }}</v-icon>
                         <p class="mt-0 mt-md-4 d-none d-md-flex">Previous</p>
                       </v-btn>
                     </template>
                     <template v-slot:next="{ on, attrs }">
                       <v-btn color="black" v-bind="attrs" v-on="on">
                         <p class="mt-0 mt-md-4 d-none d-md-flex">Next</p>
-                        <v-icon>mdi-arrow-right-thin</v-icon></v-btn
+                        <v-icon>{{ arrowRightThin }}</v-icon></v-btn
                       >
                     </template>
                     <v-carousel-item
@@ -479,6 +482,17 @@
 
 <script>
 import { mapState } from "vuex";
+//Icons
+import { mdiChevronDown } from "@mdi/js";
+import { mdiChevronUp } from "@mdi/js";
+import { mdiArrowLeftThin } from "@mdi/js";
+import { mdiArrowRightThin } from "@mdi/js";
+import { mdiClose } from "@mdi/js";
+import { mdiCellphone } from "@mdi/js";
+import { mdiTablet } from "@mdi/js";
+import { mdiLaptop } from "@mdi/js";
+import { mdiCircleSmall } from "@mdi/js";
+import { mdiMinus } from "@mdi/js";
 
 export default {
   name: "Project",
@@ -491,6 +505,17 @@ export default {
       usedExpand: false,
       usedExpandTwo: false,
       showGif: false,
+      //Icons
+      chevronDown: mdiChevronDown,
+      chevronUp: mdiChevronUp,
+      arrowLeftThin: mdiArrowLeftThin,
+      arrowRightThin: mdiArrowRightThin,
+      close: mdiClose,
+      cellphone: mdiCellphone,
+      tablet: mdiTablet,
+      laptop: mdiLaptop,
+      circleSmall: mdiCircleSmall,
+      minus: mdiMinus,
     };
   },
   components: {},

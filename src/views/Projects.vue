@@ -20,7 +20,7 @@
                   v-bind="attrs"
                   v-on="on"
                 >
-                  Filter <v-icon>mdi-chevron-down</v-icon>
+                  Filter <v-icon>{{ chevronDown }}</v-icon>
                 </v-btn>
               </v-row>
             </template>
@@ -80,7 +80,7 @@
             <v-tab class="text-h6">
               <v-row>
                 <v-col cols="3">
-                  <v-icon color="blue">mdi-monitor-edit</v-icon>
+                  <v-icon color="blue">{{ monitorEdit }}</v-icon>
                 </v-col>
                 <v-col cols="9">UI/UX</v-col>
               </v-row>
@@ -88,7 +88,7 @@
             <v-tab class="text-h6">
               <v-row>
                 <v-col cols="3">
-                  <v-icon color="blue">mdi-monitor-dashboard</v-icon>
+                  <v-icon color="blue">{{ monitorDashboard }}</v-icon>
                 </v-col>
                 <v-col cols="9">Front-End</v-col>
               </v-row>
@@ -96,7 +96,7 @@
             <v-tab class="text-h6">
               <v-row>
                 <v-col cols="3">
-                  <v-icon color="blue">mdi-xml</v-icon>
+                  <v-icon color="blue">{{ xml }}</v-icon>
                 </v-col>
                 <v-col cols="9">Back-End</v-col>
               </v-row>
@@ -189,11 +189,20 @@
 <script>
 import ProjectCard from "@/components/ProjectCard.vue";
 import { mapState } from "vuex";
+//Icons
+import { mdiMonitorDashboard } from "@mdi/js";
+import { mdiMonitorEdit } from "@mdi/js";
+import { mdiXml } from "@mdi/js";
+import { mdiChevronDown } from "@mdi/js";
 
 export default {
   name: "Projects",
   data: () => ({
     tab: null,
+    monitorDashboard: mdiMonitorDashboard,
+    monitorEdit: mdiMonitorEdit,
+    xml: mdiXml,
+    chevronDown: mdiChevronDown,
   }),
 
   components: {

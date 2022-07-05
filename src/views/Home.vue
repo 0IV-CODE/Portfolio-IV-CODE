@@ -240,9 +240,9 @@
                   >
                     Projects
                   </p>
-                  <v-icon color="white" class="mx-2 mr-16 vertical"
-                    >mdi-image-plus</v-icon
-                  >
+                  <v-icon color="white" class="mx-2 mr-16 vertical">{{
+                    imagePlus
+                  }}</v-icon>
                 </v-col>
                 <v-col cols="1"></v-col>
               </v-row>
@@ -373,9 +373,9 @@
               <p class="black--text vertical mt-16 pt-8">
                 <b>Projects</b>
               </p>
-              <v-icon color="black" class="mx-2 mr-8 vertical"
-                >mdi-image-plus</v-icon
-              >
+              <v-icon color="black" class="mx-2 mr-8 vertical">{{
+                imagePlus
+              }}</v-icon>
             </v-col>
             <v-col cols="12" align="start">
               <v-btn
@@ -459,7 +459,7 @@
                   <v-icon
                     color="black"
                     class="mx-2 mt-4 mt-sm-0 ml-8 ml-sm-16 vertical-two"
-                    >mdi-image-plus</v-icon
+                    >{{ briefcase }}</v-icon
                   >
                 </v-col>
                 <v-col cols="9" class="px-1">
@@ -469,7 +469,7 @@
                     v-animate-onscroll="'animated fadeInRight'"
                   >
                     <p class="mb-0">
-                      <v-icon class="mx-1">mdi-monitor-dashboard</v-icon
+                      <v-icon class="mx-1">{{ monitorDashboard }}</v-icon
                       ><b>Front-End Dev</b>
                     </p>
 
@@ -503,7 +503,8 @@
                     v-animate-onscroll="'animated fadeInRight'"
                   >
                     <p class="mb-0">
-                      <v-icon class="mx-1">mdi-monitor-edit</v-icon><b>UI/UX</b>
+                      <v-icon class="mx-1">{{ monitorEdit }}</v-icon
+                      ><b>UI/UX</b>
                     </p>
                     <p class="black--text text-caption">
                       <i>Relevance of UI/UX</i>
@@ -548,7 +549,7 @@
                   <v-icon
                     color="black"
                     class="mx-2 mt-4 mt-sm-0 ml-8 ml-sm-16 vertical-two"
-                    >mdi-image-plus</v-icon
+                    >{{ briefcase }}</v-icon
                   >
                 </v-col>
                 <v-col cols="9" class="px-1">
@@ -557,7 +558,7 @@
                     class="white pa-2 pa-sm-4 mb-4 mb-sm-8 rounded-lg"
                   >
                     <p class="mb-0">
-                      <v-icon class="mx-1">mdi-monitor-dashboard</v-icon
+                      <v-icon class="mx-1">{{ monitorDashboard }}</v-icon
                       ><b>Front-End Dev</b>
                     </p>
 
@@ -587,7 +588,8 @@
                   </v-card>
                   <v-card align="start" class="white pa-2 pa-sm-4 rounded-lg">
                     <p class="mb-0">
-                      <v-icon class="mx-1">mdi-monitor-edit</v-icon><b>UI/UX</b>
+                      <v-icon class="mx-1">{{ monitorEdit }}</v-icon
+                      ><b>UI/UX</b>
                     </p>
                     <p class="black--text text-caption">
                       <i>Relevance of UI/UX</i>
@@ -754,7 +756,7 @@
                   :key="i"
                   align="center"
                 >
-                  <!-- sm+ -->
+                  <!-- sm-xl -->
                   <v-hover v-slot="{ hover }">
                     <v-card
                       max-height="250"
@@ -901,16 +903,16 @@
             <v-col cols="12" class="pb-0">
               <v-row>
                 <v-col cols="2">
-                  <v-icon color="white" size="25" class="mt-n2"
-                    >mdi-arrow-left</v-icon
-                  >
+                  <v-icon color="white" size="25" class="mt-n2">{{
+                    arrowLeft
+                  }}</v-icon>
                 </v-col>
                 <v-col cols="5">
                   <p class="white--text text-body-2"><b>iv_greatopus</b></p>
                 </v-col>
                 <v-col cols="3"></v-col>
                 <v-col cols="2">
-                  <v-icon color="white">mdi-dots-vertical</v-icon>
+                  <v-icon color="white">{{ dotsVertical }}</v-icon>
                 </v-col>
               </v-row>
             </v-col>
@@ -978,9 +980,9 @@
                 class="outline-g rounded-circle pa-1 mt-n1"
                 align="center"
               >
-                <v-icon color="white" class="ma-1" size="25"
-                  >mdi-lock-outline</v-icon
-                >
+                <v-icon color="white" class="ma-1" size="25">{{
+                  lockOutline
+                }}</v-icon>
               </v-card>
             </v-col>
             <v-col cols="9" class="pa-0 mt-1">
@@ -1000,21 +1002,21 @@
               <v-divider class="grey darken-3"></v-divider>
             </v-col>
             <v-col cols="2" justify="center">
-              <v-icon color="white" size="25">mdi-home-variant</v-icon>
+              <v-icon color="white" size="25">{{ homeVariant }}</v-icon>
             </v-col>
             <v-col cols="2" justify="center">
-              <v-icon color="white" size="25">mdi-magnify</v-icon>
+              <v-icon color="white" size="25">{{ magnify }}</v-icon>
             </v-col>
             <v-col cols="2" justify="center">
-              <v-icon color="white" size="25">mdi-movie-outline</v-icon>
+              <v-icon color="white" size="25">{{ movieOutline }}</v-icon>
             </v-col>
             <v-col cols="2" justify="center">
-              <v-icon color="white" size="25">mdi-shopping-outline</v-icon>
+              <v-icon color="white" size="25">{{ shoppingOutline }}</v-icon>
             </v-col>
             <v-col cols="2" justify="center">
-              <v-icon color="white" size="25"
-                >mdi-account-circle-outline</v-icon
-              >
+              <v-icon color="white" size="25">{{
+                accountCircleOutline
+              }}</v-icon>
             </v-col>
           </v-row>
         </v-card>
@@ -1058,11 +1060,38 @@
 </style>
 
 <script>
+//Imported Icons
+import { mdiImagePlus } from "@mdi/js";
+import { mdiBriefcase } from "@mdi/js";
+import { mdiMonitorDashboard } from "@mdi/js";
+import { mdiMonitorEdit } from "@mdi/js";
+import { mdiArrowLeft } from "@mdi/js";
+import { mdiDotsVertical } from "@mdi/js";
+import { mdiLockOutline } from "@mdi/js";
+import { mdiHomeVariant } from "@mdi/js";
+import { mdiMagnify } from "@mdi/js";
+import { mdiMovieOutline } from "@mdi/js";
+import { mdiShoppingOutline } from "@mdi/js";
+import { mdiAccountCircleOutline } from "@mdi/js";
+
 import { mapState } from "vuex";
 export default {
   name: "Home",
   data: () => ({
     tab: null,
+    //Icon Ref Name
+    imagePlus: mdiImagePlus,
+    briefcase: mdiBriefcase,
+    monitorDashboard: mdiMonitorDashboard,
+    monitorEdit: mdiMonitorEdit,
+    arrowLeft: mdiArrowLeft,
+    dotsVertical: mdiDotsVertical,
+    lockOutline: mdiLockOutline,
+    homeVariant: mdiHomeVariant,
+    magnify: mdiMagnify,
+    movieOutline: mdiMovieOutline,
+    shoppingOutline: mdiShoppingOutline,
+    accountCircleOutline: mdiAccountCircleOutline,
   }),
   computed: {
     ...mapState({
