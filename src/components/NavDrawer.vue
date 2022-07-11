@@ -114,10 +114,12 @@
         app
       >
         <v-app-bar-nav-icon class="ma-1" link to="/">
-          <v-avatar size="60">
+          <v-avatar tile size="60">
             <img
+              width="35"
+              height="35"
               src="https://ik.imagekit.io/invimgs0101/IV-CODE/logos/ivcode-logo/Wolf_BLACK_U9jK_vyvA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848451"
-              alt=""
+              alt="Website Logo"
             />
           </v-avatar>
         </v-app-bar-nav-icon>

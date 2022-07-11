@@ -23,7 +23,11 @@
         >
           <v-row>
             <v-col cols="12" align="center">
-              <v-card :width="mainLogoWidth" class="mt-0 mt-sm-8 transparent">
+              <v-card
+                :width="mainLogoWidth"
+                :height="mainLogoHeight"
+                class="mt-0 mt-sm-8 transparent"
+              >
                 <v-img
                   src="https://ik.imagekit.io/invimgs0101/IV-CODE/logos/ivcode-logo/Wolf_BLACK_U9jK_vyvA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848451"
                   contain
@@ -101,9 +105,10 @@
           class="white rounded-xl pa-6"
           elevation="4"
           width="300"
+          height="300"
           align="start"
         >
-          <p class="mb-0 text-h6 text-sm-h4 text-xl-h3"><b>Contact Me</b></p>
+          <p class="mb-0 text-h6 text-sm-h4 text-xl-h3"><b>Contact</b></p>
           <p class="black--text"><i>Hello there</i></p>
           <p>
             I avidly check my emails, so if you'd like to reach out for a
@@ -1116,10 +1121,28 @@ export default {
       }
     },
     // Intro Logo Height
+    mainLogoHeight() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return 300;
+        case "sm":
+          return 300;
+        case "md":
+          return 300;
+        case "lg":
+          return 350;
+        case "xl":
+          return 350;
+        default:
+          // fallback
+          return 250;
+      }
+    },
+    // Intro Logo Height
     mainCardHeight() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
-          return 350;
+          return "";
         case "sm":
           return 400;
         case "md":
