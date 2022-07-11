@@ -4,4 +4,4 @@ Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 
-Sitemap: https://www.iv-code.io/my_sitemap.xml
+Sitemap: https://www.iv-code.io/sitemap.xml
