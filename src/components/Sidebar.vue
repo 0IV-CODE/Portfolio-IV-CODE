@@ -108,6 +108,7 @@
 <script>
 import { mapState, mapActions } from "vuex";
 // Imported Icons
+import { mdiHomeOutline } from "@mdi/js";
 import { mdiImageMultipleOutline } from "@mdi/js";
 import { mdiBriefcase } from "@mdi/js";
 import { mdiEmailFastOutline } from "@mdi/js";
@@ -129,12 +130,13 @@ export default {
   data() {
     return {
       zIndex: 10,
+      homeOutline: mdiHomeOutline,
       chevronLeft: mdiChevronLeft,
       chevronRight: mdiChevronRight,
       close: mdiClose,
       informationOutline: mdiInformationOutline,
       mainMenu: [
-        { title: "Home", icon: "mdi-home-outline", page: "/" },
+        { title: "Home", icon: mdiHomeOutline, page: "/" },
         {
           title: "Projects",
           icon: mdiImageMultipleOutline,

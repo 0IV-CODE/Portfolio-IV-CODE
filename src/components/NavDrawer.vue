@@ -15,7 +15,7 @@
             <img
               width="45"
               height="45"
-              src="https://ik.imagekit.io/invimgs0101/IV-CODE/logos/ivcode-logo/Wolf_BLACK_U9jK_vyvA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848451"
+              src="https://ik.imagekit.io/invimgs0101/tr:q-20/IV-CODE/logos/ivcode-logo/Wolf_BLACK_U9jK_vyvA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848451"
               alt="Portfolio Logo - Wolf"
             />
           </v-avatar>
@@ -118,7 +118,7 @@
             <img
               width="35"
               height="35"
-              src="https://ik.imagekit.io/invimgs0101/IV-CODE/logos/ivcode-logo/Wolf_BLACK_U9jK_vyvA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848451"
+              src="https://ik.imagekit.io/invimgs0101/tr:q-20/IV-CODE/logos/ivcode-logo/Wolf_BLACK_U9jK_vyvA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848451"
               alt="Website Logo"
             />
           </v-avatar>

@@ -1,44 +1,33 @@
 <template>
-  <!-- To-Do: and text & seo text adjust & check btns on home page for xs -->
-  <!-- Optamize to best SEO practices -->
   <v-container>
     <!-- Intro sec -->
-    <!-- note: create css/ animation intro later-->
     <v-row>
       <v-col cols="1" xl="2"></v-col>
       <v-col cols="10" xl="8">
         <v-spacer class="mt-4 pa-sm-0" />
         <!-- Research Keywords for Tag -->
-        <h1 class="seoh1">Front-end Developer Developing Websites</h1>
+        <h1 class="seoh1">Front-end Developer creating modern web apps</h1>
       </v-col>
       <v-col cols="1" xl="2"></v-col>
       <v-col cols="1" xl="2" class="pa-0"></v-col>
       <!-- main logo container -->
       <v-col cols="10" xl="8" class="pa-0">
-        <v-card
-          class="black rounded-lg"
-          elevation="8"
-          :height="mainCardHeight"
-          align="center"
-        >
+        <v-card class="black rounded-lg" elevation="8" align="center">
           <v-row>
             <v-col cols="12" align="center">
-              <v-card
-                :width="mainLogoWidth"
-                :height="mainLogoHeight"
-                class="mt-0 mt-sm-8 transparent"
-              >
+              <v-avatar size="205" class="transparent">
                 <v-img
-                  src="https://ik.imagekit.io/invimgs0101/IV-CODE/logos/ivcode-logo/Wolf_BLACK_U9jK_vyvA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848451"
+                  :src="mainLogoImg"
                   contain
                   alt="Work illustrations by Storyset"
                 ></v-img>
-              </v-card>
+              </v-avatar>
             </v-col>
           </v-row>
         </v-card>
       </v-col>
     </v-row>
+    <v-spacer class="pa-7 ma-7"></v-spacer>
 
     <!-- Intro card sec sm-xl -->
     <v-row class="d-none d-sm-flex">
@@ -1102,61 +1091,25 @@ export default {
     ...mapState({
       skillsCards: (state) => state.skillsCards,
     }),
-    // Intro Logo Width
-    mainLogoWidth() {
+    // Intro Logo IMG Sizing
+    mainLogoImg() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
-          return 300;
+          return "https://ik.imagekit.io/invimgs0101/tr:q-20/IV-CODE/logos/ivcode-logo/Wolf_BLACK_U9jK_vyvA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848451";
         case "sm":
-          return 300;
+          return "https://ik.imagekit.io/invimgs0101/tr:q-40/IV-CODE/logos/ivcode-logo/Wolf_BLACK_U9jK_vyvA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848451";
         case "md":
-          return 300;
+          return "https://ik.imagekit.io/invimgs0101/tr:q-60/IV-CODE/logos/ivcode-logo/Wolf_BLACK_U9jK_vyvA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848451";
         case "lg":
-          return 350;
+          return "https://ik.imagekit.io/invimgs0101/tr:q-80/IV-CODE/logos/ivcode-logo/Wolf_BLACK_U9jK_vyvA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848451";
         case "xl":
-          return 350;
+          return "https://ik.imagekit.io/invimgs0101/tr:q-80//IV-CODE/logos/ivcode-logo/Wolf_BLACK_U9jK_vyvA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848451";
         default:
           // fallback
-          return 250;
+          return "https://ik.imagekit.io/invimgs0101/tr:q-40, bl-10/IV-CODE/logos/ivcode-logo/Wolf_BLACK_U9jK_vyvA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848451";
       }
     },
-    // Intro Logo Height
-    mainLogoHeight() {
-      switch (this.$vuetify.breakpoint.name) {
-        case "xs":
-          return 300;
-        case "sm":
-          return 300;
-        case "md":
-          return 300;
-        case "lg":
-          return 350;
-        case "xl":
-          return 350;
-        default:
-          // fallback
-          return 250;
-      }
-    },
-    // Intro Logo Height
-    mainCardHeight() {
-      switch (this.$vuetify.breakpoint.name) {
-        case "xs":
-          return "";
-        case "sm":
-          return 400;
-        case "md":
-          return 400;
-        case "lg":
-          return 400;
-        case "xl":
-          return 400;
-        default:
-          // fallback
-          return 400;
-      }
-    },
-    /* cardWidth v-binded to width of skills card sm-xl 
+    /* cardWidth v-binded to width of skills card sm-xl
     that dynamicly change based off breakpoints */
     cardWidth() {
       switch (this.$vuetify.breakpoint.name) {
